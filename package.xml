@@ -1,0 +1,27 @@
+<package>
+  <name>camera_to_inertial_conv</name>
+  <version>0.0.1</version>
+  <description>
+    Converts x,y measurments to dimensionless x,y,z in the inertial frame.
+    Also, if you give it the topic for camera parameters, it will take that into account too.
+  </description>
+  <license>MIT</license>
+  <maintainer email="jtb2013@gmail.com">James Bell</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <build_depend>pv_estimator</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>cmake_modules</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>pv_estimator</run_depend>
+  <run_depend>message_runtime</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>cmake_modules</run_depend>
+  <run_depend>roscpp</run_depend>
+</package>
+
+
