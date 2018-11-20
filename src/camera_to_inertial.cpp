@@ -1,11 +1,10 @@
 //TODO: tAKE IN NAME OF TOPICS TO CONVERT FROM, TO, AND USE AS CAMERA INFO
 #include <ros/ros.h>
 #include <time.h>
-#include <geometry_msgs/Point.h>
+#include <geometry_msgs/Vector3.h>
 #include <Eigen/Dense> 
 
-#include "pv_estimator/State.h"
-#include "estimator.h"
+#include "pv_estimator/Meas.h"
 
 #include <string>
 #include <cstring>
@@ -29,7 +28,7 @@ int main(int argc, char** argv){
   ros::NodeHandle nh;
 
   pub = nh.advertise<geometry_msgs::Vector3>(std::string("/tracker/inertial"),1000);
-  sub = nh.subscribe<pv_estimator::State(std::string("/tracker/state"),1000,pvCallback);
+  sub = nh.subscribe(std::string("/tracker/meas"),1000,pvCallback);
   ros::spin();
 }
 

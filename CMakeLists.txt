@@ -31,7 +31,7 @@ include_directories(
 )
 
 add_executable(camera_to_inertial_conv
-               src/camera_to_inertial.cpp
+               src/camera_to_inertial.cpp)
 
 set(EXEC_LIST camera_to_inertial_conv)
 foreach(EXEC_FILE ${EXEC_LIST})
