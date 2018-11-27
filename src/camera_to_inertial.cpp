@@ -15,7 +15,7 @@
 ros::Publisher pub;
 ros::Subscriber sub;
 
-void pvCallback(pv_estimator::State msg){
+void pvCallback(pv_estimator::Meas msg){
   geometry_msgs::Vector3 vec;
   vec.x = msg.r[0]*.01/640/.005;
   vec.y = msg.r[1]*.01/480/.005;
